@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> تشخیص بیماری فشار خون بالا</title>
+    <link rel="stylesheet" href="stylesF.css">
+</head>
+<body>
+    <div class="container">
+        <h1> فرم تشخیص بیماری فشار خون بالا</h1>
+        <form id="diagnosisForm">
+            <label for="age">سن</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="systolic">مقدار فشار خون سیستولیک(mm Hg)</label>
+            <input type="number" id="systolic" name="systolic" required>
+
+            <label for="diastolic">مقدار فشار خون دیاستولیک(mm Hg)</label>
+            <input type="number" id="diastolic" name="diastolic" required>
+
+            <label for="conditions">بیماری های زمینه ای</label>
+            <select id="conditions" name="conditions">
+                <option value="none">هیچکدام</option>
+                <option value="دیابت">دیابت</option>
+                <option value="بیماری های قلبی">بیماری های قلبی</option>
+            </select>
+
+            <button type="button" onclick="diagnose()">تشخیص نهایی</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="scriptF.js"></script>
+</body>
+</html>
